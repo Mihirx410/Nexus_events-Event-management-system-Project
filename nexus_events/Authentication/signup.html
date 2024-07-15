@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusEents | Sign Up</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container-fluid register">
+    <div class="row">
+      <div class="col-md-3 register-left">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+        <h3>Welcome</h3>
+        <p>Sign Up yourself to the Nexus Events Website</p>
+        <a href="login.html" class="login-btn">
+          Log in
+        </a>
+        <br />
+      </div>
+      <div class="col-md-9 register-right">
+        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist"></ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h2 class="register-heading">Sign up to Nexus_Events</h2>
+            <form class="register-form" method="POST" action="../php/sign_up.php">
+              <div class="row">
+                <div class="col-md-6 my-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="bx bx-user root-icon"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      name="name"
+                      value=""
+                      class="form-control"
+                      placeholder="Enter your Full Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 my-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="bx bx-user-pin root-icon"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      name="username"
+                      value=""
+                      class="form-control"
+                      placeholder="Enter Username"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="bx bx-mobile-alt root-icon"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      value=""
+                      class="form-control"
+                      placeholder="Your Contact no."
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 my-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="bx bx-envelope root-icon"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      value=""
+                      class="form-control"
+                      placeholder="Your Email"
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="bx bx-lock root-icon"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="password"
+                      name="password"
+                      value=""
+                      class="form-control"
+                      placeholder="Password"
+                      autocomplete="new-password"
+                    />
+                    <div class="input-group-append">
+                      <span
+                        class="input-group-text"
+                        style="cursor: pointer"
+                        onclick="togglePasswordVisibility()"
+                      >
+                        <i
+                          class="bx bx-show root-icon"
+                          id="showPasswordIcon"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 my-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="bx bx-lock root-icon"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="password"
+                      name="repeatPassword"
+                      value=""
+                      class="form-control"
+                      placeholder="Repeat Password"
+                      autocomplete="new-password"
+                    />
+                    <div class="input-group-append">
+                      <span
+                        class="input-group-text"
+                        style="cursor: pointer"
+                        onclick="togglePasswordVisibility()"
+                      >
+                        <i
+                          class="bx bx-show root-icon"
+                          id="showRepeatPasswordIcon"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 my-3">
+                  <div class="form-check d-flex justify-content-start mb-5">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      name="agreeTerms"
+                      id="form2Example3c"
+                    />
+                    <label class="form-check-label" for="form2Example3">
+                      I agree all statements in{"terms and conditions"}
+                      <a
+                        href="terms_conditions.htm",
+                        class="text-decoration-none"
+                      >
+                        Terms of Services
+                      </a>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="d-flex justify-content-center mx-4 mb-lg-4">
+                    <input
+                      type="submit"
+                      class="btn btn-primary btn-md px-5"
+                      name="register"
+                      value="Register"
+                    >
+                    </input>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      // Your form submission logic here
+    }
+
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementsByName("password")[0];
+      var repeatPasswordInput = document.getElementsByName("repeatPassword")[0];
+      var showPasswordIcon = document.getElementById("showPasswordIcon");
+      var showRepeatPasswordIcon = document.getElementById("showRepeatPasswordIcon");
+      
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+      repeatPasswordInput.type = repeatPasswordInput.type === "password" ? "text" : "password";
+
+      showPasswordIcon.className = passwordInput.type === "password" ? "bx bx-show root-icon" : "bx bx-hide root-icon";
+      showRepeatPasswordIcon.className = repeatPasswordInput.type === "password" ? "bx bx-show root-icon" : "bx bx-hide root-icon";
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
